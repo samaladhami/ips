@@ -1,0 +1,44 @@
+<html ng-app='ips'>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>ips</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" media="(max-width: 800px)">
+</head>
+
+<body ng-controller='homeCtrl'>
+    <header>
+        <div class="top-bar">
+            <a class="fa fa-twitter" aria-hidden="true"></a>
+            <a class="fa fa-linkedin" aria-hidden="true"></a>
+            <a class="fa fa-facebook" aria-hidden="true"></a>
+        </div>
+        <nav>
+            <div class="logo">
+                <img src="../img/IPS-logo-4.png" alt="logo">
+            </div>
+            <div class="header-links">
+                <a ng-class="{ 'router-active': isActive('/')}" href="#/">About Us</a>
+                <a ng-class="{ 'router-active': isActive('/mission-statement')}" href="#/mission-statement">Mission Statement</a>
+                <a ng-class="{ 'router-active': isActive('/vision')}" href="#/vision">Vision</a>
+                <a ng-class="{ 'router-active': isActive('/services')}" href="#/services">Services</a>
+                <a ng-class="{ 'router-active': isActive('/contact')}" href="#/contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <ui-view></ui-view>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js" charset="utf-8"></script>
+    <script src="src/app.js" charset="utf-8"></script>
+    <script src="src/homeCtrl.js" charset="utf-8"></script>
+    <script src="src/mainService.js" charset="utf-8"></script>
+</body>
+
+</html>
